@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/transfert-api.iml" filepath="$PROJECT_DIR$/.idea/transfert-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/paymentforms.iml" filepath="$PROJECT_DIR$/.idea/paymentforms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transfert-api/transfert-api.iml" filepath="$PROJECT_DIR$/transfert-api/transfert-api.iml" />
     </modules>
   </component>
 </project>

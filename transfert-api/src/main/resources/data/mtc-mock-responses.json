@@ -1,0 +1,19 @@
+
+{
+  "rules": [
+    {
+      "condition": "amount < 5",
+      "response": {
+        "status": "REJECTED",
+        "reason": "Montant minimum non atteint (5 MAD)"
+      }
+    },
+    {
+      "condition": "phoneNumber.startsWith('2126')",
+      "response": {
+        "status": "APPROVED",
+        "transactionId": "MTC-${timestamp}"
+      }
+    }
+  ]
+}

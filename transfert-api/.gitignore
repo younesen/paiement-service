@@ -1,9 +1,18 @@
-HELP.md
+### Maven ###
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### Node / React ###
+node_modules/
+dist/
+build/
+
+### Logs ###
+*.log
+
+### IDE / Outils ###
 ### STS ###
 .apt_generated
 .classpath
@@ -31,3 +40,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Autres ###
+.DS_Store
+.env

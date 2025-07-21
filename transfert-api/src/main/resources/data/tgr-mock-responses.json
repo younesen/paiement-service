@@ -1,0 +1,45 @@
+{
+  "responses": {
+    "success": {
+      "codeRetour": "000",
+      "messageRetour": "Paiement effectué avec succès",
+      "referenceTransaction": "TGR-${random.uuid}",
+      "dateOperation": "${current.date('yyyy-MM-dd')}",
+      "montant": "${payment.amount}",
+      "modePaiement": "${payment.method}",
+      "compteCredite": "RIB000123456789",
+      "nomContribuable": "CONTRIBUABLE_TEST",
+      "codeRecette": "RC123456",
+      "exercice": "2025",
+      "numeroBordereau": "BORD-${random.number(6)}"
+    },
+    "failure": {
+      "codeRetour": "999",
+      "messageRetour": "Échec du paiement",
+      "referenceTransaction": "",
+      "montant": "0",
+      "modePaiement": ""
+    }
+  },
+  "rules": [
+    {
+      "condition": "true",
+      "response": "success",
+      "log": "Forçage du succès pour débogage"
+    },
+    {
+      "condition": "${payment.amount} < 100",
+      "response": "failure",
+      "override": {
+        "messageRetour": "Le montant doit être ≥ 100 DH"
+      }
+    },
+    {
+      "condition": "${payment.amount} > 100000",
+      "response": "failure",
+      "override": {
+        "messageRetour": "Le montant doit être ≤ 100000 DH"
+      }
+    }
+  ]
+}
